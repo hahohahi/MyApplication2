@@ -30,7 +30,7 @@ public class second extends AppCompatActivity{
 
 
 
-        Adapter= new secondAdapter(MainActivity.list, getBaseContext());
+        Adapter= new secondAdapter(MainActivity.list, this);
         lv.setAdapter(Adapter);
 
 

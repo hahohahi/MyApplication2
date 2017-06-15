@@ -1,6 +1,7 @@
 package com.example.leejaewon.myapplication;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,17 +67,10 @@ public class secondAdapter extends ArrayAdapter<info> {
 
         viewHolder.t_num.setText(dataModel.getNum());
         viewHolder.t_s.setText(dataModel.getS());
-        viewHolder.number.setText(String.valueOf(i++));
-
-
-//        result.setOnLongClickListener(new View.OnLongClickListener(){
-//            @Override
-//            public boolean onLongClick(View v){
-//
-//                return true;
-//            }
-//        });
-        // Return the completed view to render on screen
+        Log.i("position",String.valueOf(position));
+        if(viewHolder.number.getText().toString().equals("")) {
+            viewHolder.number.setText(String.valueOf(i++));
+        }
         return convertView;
     }
 
